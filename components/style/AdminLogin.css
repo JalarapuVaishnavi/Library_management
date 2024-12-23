@@ -1,0 +1,69 @@
+/* AdminLogin.css */
+.admin-login-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .admin-login-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .admin-login-form h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .admin-login-form label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  .admin-login-form input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .admin-login-form input:focus {
+    border-color: #0056b3;
+  }
+  
+  .admin-login-form button {
+    padding: 12px;
+    background-color: #707172;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Remove the hover state */
+.admin-login-form button:hover {
+    background-color: #707172; /* Same as the default background */
+    cursor: pointer; /* Keeps the cursor pointer */
+    transition: none; /* Remove the transition effect */
+}

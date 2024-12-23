@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Item</title>
+  <script>
+    // Function to handle form submission
+    async function createItem() {
+      const name = document.getElementById('name').value;
+      const price = parseFloat(document.getElementById('price').value);
+
+      // Send data to the backend (Node.js)
+      const response = await fetch('http://localhost:5000/items', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, price }),
+      });
+
+      const result = await response.json();
+      console.log('Item created:', result);
+    }
+  </script>
+</head>
+<body>
+  <h1>Create New Item</h1>
+  <input type="text" id="name" placeholder="Item Name" />
+  <input type="number" id="price" placeholder="Item Price" />
+  <button onclick="createItem()">Create Item</button>
+</body>
+</html>
